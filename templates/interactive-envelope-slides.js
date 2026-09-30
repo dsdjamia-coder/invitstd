@@ -234,8 +234,8 @@ window.registerTemplate({
                     color: #1F2937;
                     font-family: 'Poppins', sans-serif;
                     height: 100%;
-                    min-height: 100dvh;
-                    max-height: 100dvh;
+                    min-height: var(--vh, 100dvh);
+                    max-height: var(--vh, 100dvh);
                     width: 100%;
                     max-width: 480px;
                     margin: 0 auto;
@@ -309,7 +309,7 @@ window.registerTemplate({
                     position: relative;
                     width: 100%;
                     flex-grow: 1;
-                    height: calc(100dvh - 4.5rem);
+                    height: calc(var(--vh, 100dvh) - 4.5rem);
                     overflow: hidden;
                     box-sizing: border-box;
                     display: flex;
