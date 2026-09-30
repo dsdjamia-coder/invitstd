@@ -1,0 +1,9 @@
+export const firebaseConfig = Object.freeze({
+    projectId: "bright-tube-p07pf",
+    appId: "1:239455260650:web:5c3d61cbd8fcfefccc6c93",
+    apiKey: "AIzaSyDdUyk_yvZoQ1JI1pPLJTK51U91BVO0XSA",
+    authDomain: "bright-tube-p07pf.firebaseapp.com",
+    firestoreDatabaseId: "ai-studio-invitation-fcbd086e-03b2-4786-81a0-6b6ad0e57e7f",
+    storageBucket: "bright-tube-p07pf.firebasestorage.app",
+    messagingSenderId: "239455260650"
+});

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFBA73" />
+      <stop offset="50%" stop-color="#C5A059" />
+      <stop offset="100%" stop-color="#9E7D3B" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="46" fill="#FAF9F6" stroke="url(#gold)" stroke-width="2" />
+  <!-- Intersecting rings -->
+  <circle cx="44" cy="50" r="16" fill="none" stroke="url(#gold)" stroke-width="1.5" opacity="0.8" />
+  <circle cx="56" cy="50" r="16" fill="none" stroke="url(#gold)" stroke-width="1.5" opacity="0.8" />
+  <!-- Monogram text -->
+  <text x="50" y="55" font-family="'Playfair Display', 'Cinzel', serif" font-size="14" font-weight="bold" fill="url(#gold)" text-anchor="middle" letter-spacing="1">IS</text>
+</svg>

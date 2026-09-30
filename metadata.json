@@ -1,0 +1,8 @@
+{
+  "name": "Wedding Studio",
+  "description": "Create and customize elegant digital wedding invitations.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

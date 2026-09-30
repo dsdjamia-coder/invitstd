@@ -1,0 +1,110 @@
+{
+  "entities": {
+    "invitation": {
+      "title": "Invitation",
+      "description": "A wedding invitation created by an admin",
+      "type": "object",
+      "properties": {
+        "ownerUid": {
+          "type": "string",
+          "description": "UID of the owner"
+        },
+        "code": {
+          "type": "string",
+          "description": "Unique slug/URL code"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "published"],
+          "description": "Publish status"
+        },
+        "templateId": {
+          "type": "string",
+          "description": "Selected template ID"
+        },
+        "couple": {
+          "type": "object",
+          "description": "Details about the wedding couple"
+        },
+        "mainEvent": {
+          "type": "object",
+          "description": "Main event information"
+        },
+        "content": {
+          "type": "object",
+          "description": "Heading, message and quotes"
+        },
+        "design": {
+          "type": "object",
+          "description": "Colors, layout styles and custom background images"
+        },
+        "settings": {
+          "type": "object",
+          "description": "Toggles for hiding or displaying sections"
+        },
+        "photosQr": {
+          "type": "string",
+          "description": "Base64 image or URL for photos sharing QR"
+        },
+        "photosLink": {
+          "type": "string",
+          "description": "Direct link to photos gallery folder"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["ownerUid", "code", "status", "templateId"]
+    },
+    "rsvp": {
+      "title": "RSVP",
+      "description": "Guest RSVP response for an invitation",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 128,
+          "description": "Guardian/Guest name"
+        },
+        "phone": {
+          "type": "string",
+          "maxLength": 10,
+          "description": "10-digit mobile number"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["attending", "declined"],
+          "description": "Attendance choice"
+        },
+        "additionalCount": {
+          "type": "integer",
+          "description": "Additional guests accompanying"
+        },
+        "familyDetails": {
+          "type": "string",
+          "description": "Comma-separated list of family member names"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["name", "phone", "status"]
+    }
+  },
+  "firestore": {
+    "/invitations/{invitationId}": {
+      "schema": "invitation",
+      "description": "Main collection for storing wedding invitations"
+    },
+    "/invitations/{invitationId}/rsvps/{rsvpId}": {
+      "schema": "rsvp",
+      "description": "Subcollection storing RSVP submissions per invitation"
+    }
+  }
+}
